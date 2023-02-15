@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Potrait</title>
+  <style>
+    * {box-sizing: border-box}
+    body {
+      background-image:url("j.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      color:white;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      text-align: center;
+    }
+    section 
+    {
+      background-color: rgb(60, 179, 113, 0.4);
+      max-width:1500px;
+      margin: 0 auto;
+      text-align:left;
+    }
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.1s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Potrait Photography</h1>
+  </header>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="5.jpeg" style="width:100%">
+  <div class="text">Poser</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="p2.jpg" style="width:100%">
+  <div class="text">Silhoutte</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="p3.jpg" style="width:100%">
+  <div class="text">Details</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="p4.jpeg" style="width:100%">
+  <div class="text">Bokeh</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="p5.jpeg" style="width:100%">
+  <div class="text">Ur mom</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<section>
+	<p>There are many techniques available to light a subject's face.Three-point lighting is one of the most common lighting setups. It is traditionally used in a studio, but photographers may use it on-location in combination with ambient light. This setup uses three lights, the key light, fill light, and back light, to fully bring out details and the three-dimensionality of the subject's features.</p>
+	<p>The key light, also known as the main light, is placed either to the left, right, or above the subject's face, typically 30 to 60 degrees from the camera. The purpose of the key light is to give shape to and emphasize particular features of the subject. The distance of the key light from the camera controls the falloff of the light and profoundness of shadows.Most lights used in modern photography are a flash of some sort. The lighting for portraiture is typically diffused by bouncing it from the inside of an umbrella, or by using a soft box. A soft box is a fabric box, encasing a photo strobe head, one side of which is made of translucent fabric. This provides a softer lighting for portrait work and is often considered more appealing than the harsh light often cast by open strobes. Hair and background lights are usually not diffused. It is more important to control light spillage to other areas of the subject. Snoots, barn doors and flags or gobos help focus the lights exactly where the photographer wants them. Background lights are sometimes used with color gels placed in front of the light to create coloured backgrounds.</p>
+	<p>There are essentially four approaches that can be taken in photographic portraiture—the constructionist, environmental, candid, and creative approach.
+
+Lenses used in portrait photography are classically fast, medium telephoto lenses, though any lens may be used, depending on artistic purposes. See Canon EF Portrait Lenses for Canon lenses in this style; other manufacturers feature similar ranges. The first dedicated portrait lens was the Petzval lens developed in 1840 by Joseph Petzval. It had a relatively narrow field of view of 30 degrees, a focal length of 150 mm, and a fast f-number in the ƒ/3.3-3.7 range.</p>
+
+	<p>Formal senior portraits date back at least to the 1880s in America.[citation needed] Some traditional senior portrait sittings include a cap and gown and other changes of clothing, portrait styles and poses.
+
+In some schools a portrait studio is invited to the school to ensure all senior portraits (for the yearbook) are similar in pose and style, and so that students who cannot afford to purchase these portraits on their own or choose not to purchase portraits will appear in the yearbook the same as other students. Other schools allow students to choose a studio and submit portraits on their own.<br>
+Modern senior portraits may include virtually any pose or clothing choice, within the limits of good taste. Students often appear with pets, student athletes pose in letterman jackets or their playing uniforms, and many choose fashion photography. Outdoor photos are popular at locations that are scenic or important to the senior. Picture proofs are usually available to view online the next day which are lower quality, unedited and often with a watermark of the studio.
+        </p>
+    </div>
+</section>
+</body>
+</html>
